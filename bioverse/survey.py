@@ -20,6 +20,7 @@ class Survey(dict, Object):
     R_st_ref: float = 1.0
     D_ref: float = 15.0
     d_ref: float = 10.0
+    mode: str = ""
 
     def __post_init__(self):
         if type(self) == Survey:
