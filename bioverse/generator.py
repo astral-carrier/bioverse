@@ -291,7 +291,7 @@ class Step():
 
         params = inspect.signature(func).parameters
         for k,v in params.items():
-            if v.default == inspect._empty:
+            if v.default == inspect.Parameter.empty:
                 continue
             if k not in self.args or reload:
                 self.args[k] = v.default
