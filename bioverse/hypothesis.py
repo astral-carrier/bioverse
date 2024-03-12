@@ -21,7 +21,7 @@ class Hypothesis():
         Function describing the hypothesis. Must be defined as f(theta, X) where theta is a tuple of parameter values
         and X is a set of independent variables. Returns the calculated values of Y, the set of dependent variables for
         each entry in X.
-    bounds : array
+    bounds : numpy.ndarray
         Nx2 array describing the [min, max] limits of each parameter. These are enforced even if a different prior
         distribution is defined.
     params : tuple of str, optional
