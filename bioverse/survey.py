@@ -477,8 +477,8 @@ class Measurement():
         if self.survey.mode == 'imaging':
             N_obs = np.ones(len(d))
         if self.survey.mode == 'transit':
-            N_obs = np.ceil(t_exp/d['T_dur'])
-            N_act = t_exp/d['T_dur']
+            N_act = t_exp / d['T_dur']
+            N_obs = np.ceil(N_act)
             t_exp = d['T_dur']*N_obs
 
         return t_exp, N_obs
