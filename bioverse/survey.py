@@ -23,7 +23,7 @@ class Survey(dict, Object):
     mode: str = ""
 
     def __post_init__(self):
-        if type(self) == Survey:
+        if type(self) is Survey:
             raise ValueError("don't call Survey directly - instead use ImagingSurvey or TransitSurvey")
         self.measurements = {}
         Object.__init__(self, self.label)
